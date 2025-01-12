@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Camera</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff7b00;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .info-form {
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 1em;
+      padding: 10px 0;
+    }
+
+    .info-form label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    .info-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .info-form input[type="date"],
+    .info-form input[type="time"] {
+      font-size: 1em;
+    }
+
+    #photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 12px 30px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff7b00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e66b00;
+    }
+
+    button:active {
+      background-color: #cc5a00;
+      transform: translateY(2px);
+    }
+
+    .info-form input:focus,
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 123, 0, 0.7);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ĐỒ ÁN IOT</h1>
+    <div class="info-form">
+      <label for="photo-name">Name:</label>
+      <input type="text" id="photo-name" name="photo-name" placeholder="Enter photo name">
+      <label for="photo-date">Date:</label>
+      <input type="date" id="photo-date" name="photo-date">
+      <label for="photo-time">Time:</label>
+      <input type="time" id="photo-time" name="photo-time">
+    </div>
+    <br>
+    <img id="photo" src="" alt="Image from ESP32">
+    <br>
+    <button id="capture-btn">Chụp ảnh</button>
+    <button id="save-btn">Lưu ảnh</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
