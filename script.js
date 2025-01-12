@@ -1,5 +1,5 @@
 // URL của ESP32
-const esp32Url = "http://myesp32.ddns.net:8080/capture"; // Thay bằng IP của ESP32
+const esp32Url = "http://192.168.1.142/capture"; // Thay bằng IP của ESP32
 const uploadUrl = "http://localhost/demo/upload.php"; // Thay bằng IP hoặc domain của server
 
 const captureBtn = document.getElementById("capture-btn");
